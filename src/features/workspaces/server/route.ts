@@ -21,6 +21,7 @@ const app = new Hono().post(
       ID.unique(),
       {
         name,
+        userId: user.$id,
       }
     );
     return c.json({ data: workspace });
